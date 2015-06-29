@@ -98,7 +98,7 @@
             "sourceLanguage": "en",
             "state": "beta",
             "targetVersion": "6.2",
-            "version": "1.0.5-dev"
+            "version": "1.0.5"
         },
         "extensionKey": "jh_kestats_export",
         "name": "Export ke_stats",
