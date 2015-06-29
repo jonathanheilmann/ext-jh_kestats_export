@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-08-29T14:47:19Z">
+		<header>
+			<description>Language labels for service &quot;ExportService&quot;</description>
+			<authorName>Jonathan Heilmann</authorName>
+			<authorEmail>mail@jonathan-heilmann.de</authorEmail>
+			<generator>LFEditor</generator>
+		</header>
+		<body>
+		<trans-unit id="counter" xml:space="preserve">
+			<source>Counter</source>
+		</trans-unit>
+		<trans-unit id="created" xml:space="preserve">
+			<source>Created</source>
+		</trans-unit>
+		<trans-unit id="emailBodytext" xml:space="preserve">
+			<source>The actual statistics of %s has been attached to this email.</source>
+		</trans-unit>
+		<trans-unit id="emailSubject" xml:space="preserve">
+			<source>Statistics of</source>
+		</trans-unit>
+		<trans-unit id="headerIndex" xml:space="preserve">
+			<source>Index</source>
+		</trans-unit>
+		<trans-unit id="headerOverview" xml:space="preserve">
+			<source>Overview</source>
+		</trans-unit>
+		<trans-unit id="headerSubpages" xml:space="preserve">
+			<source>Pageviews</source>
+		</trans-unit>
+		<trans-unit id="header_browsers" xml:space="preserve">
+			<source>Browser</source>
+		</trans-unit>
+		<trans-unit id="header_ip_addresses" xml:space="preserve">
+			<source>IP addresses</source>
+		</trans-unit>
+		<trans-unit id="header_operating_systems" xml:space="preserve">
+			<source>Operating systems</source>
+		</trans-unit>
+		<trans-unit id="header_overall_day_of_month" xml:space="preserve">
+			<source>Pageviews and visitors by day of month</source>
+		</trans-unit>
+		<trans-unit id="header_overall_day_of_week" xml:space="preserve">
+			<source>Pageviews and visitors by day of week</source>
+		</trans-unit>
+		<trans-unit id="header_overall_hour_of_day" xml:space="preserve">
+			<source>Pageviews and visitors by hour of day</source>
+		</trans-unit>
+		<trans-unit id="header_pages" xml:space="preserve">
+			<source>Pageviews</source>
+		</trans-unit>
+		<trans-unit id="header_pages_overall_day_of_month" xml:space="preserve">
+			<source>Pageviews by day of month</source>
+		</trans-unit>
+		<trans-unit id="header_pages_overall_day_of_week" xml:space="preserve">
+			<source>Pageviews by day of week</source>
+		</trans-unit>
+		<trans-unit id="header_pages_overall_hour_of_day" xml:space="preserve">
+			<source>Pageviews by hour of day</source>
+		</trans-unit>
+		<trans-unit id="header_referers_external_websites" xml:space="preserve">
+			<source>Websites</source>
+		</trans-unit>
+		<trans-unit id="header_referers_searchengines" xml:space="preserve">
+			<source>Seachengines</source>
+		</trans-unit>
+		<trans-unit id="header_robots" xml:space="preserve">
+			<source>Robots</source>
+		</trans-unit>
+		<trans-unit id="header_search_strings" xml:space="preserve">
+			<source>Seachstrings</source>
+		</trans-unit>
+		<trans-unit id="header_unknown_user_agents" xml:space="preserve">
+			<source>Unknown user agents</source>
+		</trans-unit>
+		<trans-unit id="header_visits_overall_day_of_month" xml:space="preserve">
+			<source>Visitors by day of month</source>
+		</trans-unit>
+		<trans-unit id="header_visits_overall_day_of_week" xml:space="preserve">
+			<source>Visitors by day of week</source>
+		</trans-unit>
+		<trans-unit id="header_visits_overall_hour_of_day" xml:space="preserve">
+			<source>Visitors by hour of day</source>
+		</trans-unit>
+		<trans-unit id="line" xml:space="preserve">
+			<source>Line</source>
+		</trans-unit>
+		<trans-unit id="name" xml:space="preserve">
+			<source>Name</source>
+		</trans-unit>
+		<trans-unit id="of" xml:space="preserve">
+			<source>of</source>
+		</trans-unit>
+		<trans-unit id="page" xml:space="preserve">
+			<source>page</source>
+		</trans-unit>
+		<trans-unit id="pages_per_visit" xml:space="preserve">
+			<source>Pages per visit</source>
+		</trans-unit>
+		<trans-unit id="pageviews" xml:space="preserve">
+			<source>Pageviews</source>
+		</trans-unit>
+		<trans-unit id="percentage" xml:space="preserve">
+			<source>Percentage</source>
+		</trans-unit>
+		<trans-unit id="setlocale" xml:space="preserve">
+			<source>en_GB</source>
+		</trans-unit>
+		<trans-unit id="sum" xml:space="preserve">
+			<source>Sum</source>
+		</trans-unit>
+		<trans-unit id="title" xml:space="preserve">
+			<source>Statistics export</source>
+		</trans-unit>
+		<trans-unit id="visits" xml:space="preserve">
+			<source>Visits</source>
+		</trans-unit>
+		</body>
+	</file>
+</xliff>

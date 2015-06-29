@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-08-30T20:31:04Z">
+		<header>
+			<generator>LFEditor</generator>
+		</header>
+		<body>
+		<trans-unit id="tx_jhkestatsexport_domain_model_filelist" xml:space="preserve">
+			<source>Filelist</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_domain_model_filelist.content" xml:space="preserve">
+			<source>Content</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_domain_model_filelist.filename" xml:space="preserve">
+			<source>Filename</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_domain_model_filelist.mailsendto" xml:space="preserve">
+			<source>Mail send to</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_layout.create" xml:space="preserve">
+			<source>Create new PDF</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_layout.overview" xml:space="preserve">
+			<source>Overview</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_list.content" xml:space="preserve">
+			<source>Content</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_list.crdate" xml:space="preserve">
+			<source>Creation date</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_list.create" xml:space="preserve">
+			<source>Create new PDF</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_list.delete" xml:space="preserve">
+			<source>Delete</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_list.filename" xml:space="preserve">
+			<source>Filename</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_list.overview" xml:space="preserve">
+			<source>Overview</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_list.tstamp" xml:space="preserve">
+			<source>Last update date</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_new.create" xml:space="preserve">
+			<source>Create new PDF</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_new.form.browserRobots" xml:space="preserve">
+			<source>Browser/Robots</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_new.form.browserRobotsBrowsersImg" xml:space="preserve">
+			<source>Browser/Robots: Browsers as image</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_new.form.domain" xml:space="preserve">
+			<source>Domain</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_new.form.language" xml:space="preserve">
+			<source>Language</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_new.form.mailTo" xml:space="preserve">
+			<source>Mail PDF to</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_new.form.month" xml:space="preserve">
+			<source>Select month</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_new.form.monthLast" xml:space="preserve">
+			<source>Last complete month</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_new.form.monthThis" xml:space="preserve">
+			<source>This month</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_new.form.other" xml:space="preserve">
+			<source>Other</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_new.form.overview" xml:space="preserve">
+			<source>Overview</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_new.form.pageviews" xml:space="preserve">
+			<source>Pageviews</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_new.form.referers" xml:space="preserve">
+			<source>Referers</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_new.form.rootid" xml:space="preserve">
+			<source>Id of website-root</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_new.form.submit" xml:space="preserve">
+			<source>Submit</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_new.form.time" xml:space="preserve">
+			<source>Time</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_new.form.timeMerge" xml:space="preserve">
+			<source>Time: Merge pageviews and visitors in one table</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_new.form.timeVisitsDayofmonthImg" xml:space="preserve">
+			<source>Time: Visitors by day of month as image</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_new.form.timeVisitsDayofweekImg" xml:space="preserve">
+			<source>Time: Visitors by day of week as image</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_new.form.timeVisitsHourofdayImg" xml:space="preserve">
+			<source>Time: Visitors by hour of day as image</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_task.description" xml:space="preserve">
+			<source>Export statistics as PDF and send them in email</source>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_task.title" xml:space="preserve">
+			<source>Export statistics</source>
+		</trans-unit>
+		</body>
+	</file>
+</xliff>

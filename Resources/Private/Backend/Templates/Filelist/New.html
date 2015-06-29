@@ -1,0 +1,34 @@
+
+<f:layout name="Default" />
+
+<f:section name="content">
+<h1><f:translate key="tx_jhkestatsexport_new.create" /></h1>
+
+<f:flashMessages />
+
+<f:render partial="FormErrors" />
+
+<f:form action="create" name="newPdfSetup" enctype="multipart/form-data">
+	<f:form.checkbox name="overview" value="overview" checked="{formPrefill.checkbox.overview}" /><f:translate key="tx_jhkestatsexport_new.form.overview" /><br/>
+	<f:form.checkbox name="pageviews" value="pageviews" checked="{formPrefill.checkbox.pageviews}" /><f:translate key="tx_jhkestatsexport_new.form.pageviews" /><br/>
+	<f:form.checkbox name="time" value="time" checked="{formPrefill.checkbox.time}" /><f:translate key="tx_jhkestatsexport_new.form.time" /><br/>
+		<div class="timeSubelements" style="{formStyle.timeSubelements}">
+			<f:form.checkbox name="timeMerge" value="timeMerge" checked="{formPrefill.checkbox.timeMerge}" style="margin-left: 6px;" /><f:translate key="tx_jhkestatsexport_new.form.timeMerge" /><br/>
+			<f:form.checkbox name="timeVisitsDayofmonthImg" value="timeVisitsDayofmonthImg" checked="{formPrefill.checkbox.timeVisitsDayofmonthImg}" style="margin-left: 6px; margin-top: 6px" /><f:translate key="tx_jhkestatsexport_new.form.timeVisitsDayofmonthImg" /><br/>
+			<f:form.checkbox name="timeVisitsDayofweekImg" value="timeVisitsDayofweekImg" checked="{formPrefill.checkbox.timeVisitsDayofweekImg}" style="margin-left: 6px;" /><f:translate key="tx_jhkestatsexport_new.form.timeVisitsDayofweekImg" /><br/>
+			<f:form.checkbox name="timeVisitsHourofdayImg" value="timeVisitsHourofdayImg" checked="{formPrefill.checkbox.timeVisitsHourofdayImg}" style="margin-left: 6px;" /><f:translate key="tx_jhkestatsexport_new.form.timeVisitsHourofdayImg" /><br/>
+		</div>
+	<f:form.checkbox name="referers" value="referers" checked="{formPrefill.checkbox.referers}" /><f:translate key="tx_jhkestatsexport_new.form.referers" /><br/>
+	<f:form.checkbox name="browserRobots" value="browserRobots" checked="{formPrefill.checkbox.browserRobots}" /><f:translate key="tx_jhkestatsexport_new.form.browserRobots" /><br/>
+		<div class="timeSubelements" style="{formStyle.browserRobotsSubelements}">
+			<f:form.checkbox name="browserRobotsBrowsersImg" value="browserRobotsBrowsersImg" checked="{formPrefill.checkbox.browserRobotsBrowsersImg}" style="margin-left: 6px;" /><f:translate key="tx_jhkestatsexport_new.form.browserRobotsBrowsersImg" /><br/>
+		</div>
+	<f:form.checkbox name="other" value="other" checked="{formPrefill.checkbox.other}" /><f:translate key="tx_jhkestatsexport_new.form.other" /><br/>
+
+	<label for="month" style="width: 120px; display: inline-block;"><f:translate key="tx_jhkestatsexport_new.form.month" /></label><f:form.select name="month" options="{formPrefill.month}" style="min-width: 200px;" /><br />
+	<label for="domain" style="width: 120px; display: inline-block;"><f:translate key="tx_jhkestatsexport_new.form.domain" /></label><f:form.select name="domain" options="{formPrefill.domain}" style="min-width: 200px;" /><br />
+	<label for="mailTo" style="width: 120px; display: inline-block;"><f:translate key="tx_jhkestatsexport_new.form.mailTo" /></label><f:form.textfield name="mailTo" value="{formPrefill.mailTo}" style="min-width: 200px;" /><br />
+	<f:form.submit value="{f:translate(key:'tx_jhkestatsexport_new.form.submit')}" />
+</f:form>
+
+</f:section>

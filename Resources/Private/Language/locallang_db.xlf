@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-08-26T21:04:19Z" product-name="jh_kestats_export">
+		<header/>
+		<body>
+			<trans-unit id="tx_jhkestatsexport_domain_model_filelist">
+				<source>Filelist</source>
+			</trans-unit>
+			<trans-unit id="tx_jhkestatsexport_domain_model_filelist.filename">
+				<source>Filename</source>
+			</trans-unit>
+			<trans-unit id="tx_jhkestatsexport_domain_model_filelist.mailsendto">
+				<source>Mailsendto</source>
+			</trans-unit>
+			<trans-unit id="tx_jhkestatsexport_domain_model_filelist.content">
+				<source>Content</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

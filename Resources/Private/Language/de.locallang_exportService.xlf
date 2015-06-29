@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2014-08-29T14:47:19Z">
+		<header>
+			<description>Language labels for service &quot;ExportService&quot;</description>
+			<authorName>Jonathan Heilmann</authorName>
+			<authorEmail>mail@jonathan-heilmann.de</authorEmail>
+			<generator>LFEditor</generator>
+		</header>
+		<body>
+		<trans-unit id="counter" approved="yes" xml:space="preserve">
+			<source>Counter</source>
+			<target>Zähler</target>
+		</trans-unit>
+		<trans-unit id="created" approved="yes" xml:space="preserve">
+			<source>Created</source>
+			<target>Erstellt</target>
+		</trans-unit>
+		<trans-unit id="emailBodytext" approved="yes" xml:space="preserve">
+			<source>The actual statistics of %s has been attached to this email.</source>
+			<target>Die aktuelle Statistik of %s wurde an diese email angehängt.</target>
+		</trans-unit>
+		<trans-unit id="emailSubject" approved="yes" xml:space="preserve">
+			<source>Statistics of</source>
+			<target>Statistik von</target>
+		</trans-unit>
+		<trans-unit id="headerIndex" approved="yes" xml:space="preserve">
+			<source>Index</source>
+			<target>Inhaltsverzeichnis</target>
+		</trans-unit>
+		<trans-unit id="headerOverview" approved="yes" xml:space="preserve">
+			<source>Overview</source>
+			<target>Übersicht</target>
+		</trans-unit>
+		<trans-unit id="headerSubpages" approved="yes" xml:space="preserve">
+			<source>Pageviews</source>
+			<target>Seitenansichten</target>
+		</trans-unit>
+		<trans-unit id="header_browsers" approved="yes" xml:space="preserve">
+			<source>Browser</source>
+			<target>Browser</target>
+		</trans-unit>
+		<trans-unit id="header_ip_addresses" approved="yes" xml:space="preserve">
+			<source>IP addresses</source>
+			<target>IP Adressen</target>
+		</trans-unit>
+		<trans-unit id="header_operating_systems" approved="yes" xml:space="preserve">
+			<source>Operating systems</source>
+			<target>Betriebssysteme</target>
+		</trans-unit>
+		<trans-unit id="header_overall_day_of_month" approved="yes" xml:space="preserve">
+			<source>Pageviews and visitors by day of month</source>
+			<target>Seitenansichten und Besucher nach Tag im Monat</target>
+		</trans-unit>
+		<trans-unit id="header_overall_day_of_week" approved="yes" xml:space="preserve">
+			<source>Pageviews and visitors by day of week</source>
+			<target>Seitenansichten und Besucher nach Wochentag</target>
+		</trans-unit>
+		<trans-unit id="header_overall_hour_of_day" approved="yes" xml:space="preserve">
+			<source>Pageviews and visitors by hour of day</source>
+			<target>Seitenansichten und Besucher nach Uhrzeit</target>
+		</trans-unit>
+		<trans-unit id="header_pages" approved="yes" xml:space="preserve">
+			<source>Pageviews</source>
+			<target>Seitenansichten</target>
+		</trans-unit>
+		<trans-unit id="header_pages_overall_day_of_month" approved="yes" xml:space="preserve">
+			<source>Pageviews by day of month</source>
+			<target>Seitenansichten nach Tag im Monat</target>
+		</trans-unit>
+		<trans-unit id="header_pages_overall_day_of_week" approved="yes" xml:space="preserve">
+			<source>Pageviews by day of week</source>
+			<target>Seitenansichten nach Wochentag</target>
+		</trans-unit>
+		<trans-unit id="header_pages_overall_hour_of_day" approved="yes" xml:space="preserve">
+			<source>Pageviews by hour of day</source>
+			<target>Seitenansichten nach Uhrzeit</target>
+		</trans-unit>
+		<trans-unit id="header_referers_external_websites" approved="yes" xml:space="preserve">
+			<source>Websites</source>
+			<target>Websites</target>
+		</trans-unit>
+		<trans-unit id="header_referers_searchengines" approved="yes" xml:space="preserve">
+			<source>Seachengines</source>
+			<target>Suchmaschinen</target>
+		</trans-unit>
+		<trans-unit id="header_robots" approved="yes" xml:space="preserve">
+			<source>Robots</source>
+			<target>Roboter</target>
+		</trans-unit>
+		<trans-unit id="header_search_strings" approved="yes" xml:space="preserve">
+			<source>Seachstrings</source>
+			<target>Suchbegriffe</target>
+		</trans-unit>
+		<trans-unit id="header_unknown_user_agents" approved="yes" xml:space="preserve">
+			<source>Unknown user agents</source>
+			<target>Unknown user agents</target>
+		</trans-unit>
+		<trans-unit id="header_visits_overall_day_of_month" approved="yes" xml:space="preserve">
+			<source>Visitors by day of month</source>
+			<target>Besucher nach Tag im Monat</target>
+		</trans-unit>
+		<trans-unit id="header_visits_overall_day_of_week" approved="yes" xml:space="preserve">
+			<source>Visitors by day of week</source>
+			<target>Besucher nach Wochentag</target>
+		</trans-unit>
+		<trans-unit id="header_visits_overall_hour_of_day" approved="yes" xml:space="preserve">
+			<source>Visitors by hour of day</source>
+			<target>Besucher nach Uhrzeit</target>
+		</trans-unit>
+		<trans-unit id="line" approved="yes" xml:space="preserve">
+			<source>Line</source>
+			<target>Zeile</target>
+		</trans-unit>
+		<trans-unit id="name" approved="yes" xml:space="preserve">
+			<source>Name</source>
+			<target>Name</target>
+		</trans-unit>
+		<trans-unit id="of" approved="yes" xml:space="preserve">
+			<source>of</source>
+			<target>von</target>
+		</trans-unit>
+		<trans-unit id="page" approved="yes" xml:space="preserve">
+			<source>page</source>
+			<target>Seite</target>
+		</trans-unit>
+		<trans-unit id="pages_per_visit" approved="yes" xml:space="preserve">
+			<source>Pages per visit</source>
+			<target>Seiten pro Besucher</target>
+		</trans-unit>
+		<trans-unit id="pageviews" approved="yes" xml:space="preserve">
+			<source>Pageviews</source>
+			<target>Seitenansichten</target>
+		</trans-unit>
+		<trans-unit id="percentage" approved="yes" xml:space="preserve">
+			<source>Percentage</source>
+			<target>Prozent</target>
+		</trans-unit>
+		<trans-unit id="setlocale" approved="yes" xml:space="preserve">
+			<source>en_GB</source>
+			<target>de_DE.UTF-8</target>
+		</trans-unit>
+		<trans-unit id="sum" approved="yes" xml:space="preserve">
+			<source>Sum</source>
+			<target>Summe</target>
+		</trans-unit>
+		<trans-unit id="title" approved="yes" xml:space="preserve">
+			<source>Statistics export</source>
+			<target>Statistik-Export</target>
+		</trans-unit>
+		<trans-unit id="visits" approved="yes" xml:space="preserve">
+			<source>Visits</source>
+			<target>Besucher</target>
+		</trans-unit>
+		</body>
+	</file>
+</xliff>
