@@ -2,7 +2,7 @@
 /***************************************************************
 *  Copyright notice
 *
-*  (c) 2014 Jonathan Heilmann <mail@jonathan-heilmann.de>
+*  (c) 2014-2015 Jonathan Heilmann <mail@jonathan-heilmann.de>
 *  All rights reserved
 *
 *  This script is part of the Typo3 project. The Typo3 project is
@@ -34,8 +34,11 @@ class ext_update {
 	 * @return	boolean	true to allow access
 	 */
 	public function access($what = 'all') {
-		$filelistCount = $GLOBALS['TYPO3_DB']->exec_SELECTcountRows('filename', 'tx_jhkestatsexport_filelist', 'deleted=0');
-		//\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($filelistCount);
+		$filelistCount = 0;
+		$tables = $GLOBALS['TYPO3_DB']->admin_get_tables();
+		if (array_key_exists('tx_jhkestatsexport_filelist', $tables)) {
+			$filelistCount = $GLOBALS['TYPO3_DB']->exec_SELECTcountRows('filename', 'tx_jhkestatsexport_filelist', 'deleted=0');
+		}
 		return ($filelistCount > 0 ? TRUE : FALSE);
 	}
 
