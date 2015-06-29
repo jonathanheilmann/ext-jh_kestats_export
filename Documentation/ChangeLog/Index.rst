@@ -1,4 +1,4 @@
-﻿.. ==================================================
+.. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
@@ -21,6 +21,14 @@ ChangeLog
 
    :Changes:
          Changes
+
+ - :Version:
+         1.0.5
+
+   :Changes:
+         \* [BUGFIX] DB error in ExtensionManager
+         
+         \* [TASK] Add dependency to EXT:ke_stats
 
  - :Version:
          1.0.4

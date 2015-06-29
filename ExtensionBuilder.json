@@ -92,13 +92,13 @@
         "emConf": {
             "category": "services",
             "custom_category": "",
-            "dependsOn": "typo3 => 6.2.0-6.2.99\n",
+            "dependsOn": "typo3 => 6.2.0-6.2.99\nke_stats => 1.2.0",
             "disableLocalization": false,
             "disableVersioning": false,
             "sourceLanguage": "en",
             "state": "beta",
             "targetVersion": "6.2",
-            "version": "1.0.0"
+            "version": "1.0.5-dev"
         },
         "extensionKey": "jh_kestats_export",
         "name": "Export ke_stats",

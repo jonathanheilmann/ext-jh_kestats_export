@@ -14,7 +14,7 @@ $EM_CONF[$_EXTKEY] = array (
 	'title' => 'Export ke_stats',
 	'description' => 'Export ke_stats data as pdf with some more grafics. Export may be done manually or automatically by cronjob (scheduler).',
 	'category' => 'module',
-	'version' => '1.0.4',
+	'version' => '1.0.5-dev',
 	'state' => 'beta',
 	'uploadfolder' => false,
 	'createDirs' => '',
@@ -27,6 +27,7 @@ $EM_CONF[$_EXTKEY] = array (
 		'depends' => 
 		array (
 			'typo3' => '6.2.0-6.2.99',
+			'ke_stats' => '1.2.0',
 		),
 		'conflicts' => 
 		array (

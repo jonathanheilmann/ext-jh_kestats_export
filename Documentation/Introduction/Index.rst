@@ -1,4 +1,4 @@
-﻿.. ==================================================
+.. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
@@ -31,8 +31,8 @@ What does it do?
 Contribute
 ----------
 
-Feel free to contribute to this extension within TYPO3 Forge: `http://forge.typo3.org/projects/extension-jh_kestats_export/
-<http://forge.typo3.org/projects/extension-jh_kestats_export/>`_.
+The extension moved from TYPO3 Forge to GitHub: `https://github.com/jonathanheilmann/ext-jh_kestats_export
+<https://github.com/jonathanheilmann/ext-jh_kestats_export>`_. **Feel free to contribute.**
 
 
 .. _thanks-to:
