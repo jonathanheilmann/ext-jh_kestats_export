@@ -8,5 +8,5 @@ $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks']['Heilmann\\JhKes
 	'extension' => $_EXTKEY,
 	'title' => 'LLL:EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang.xlf:tx_jhkestatsexport_task.title',
 	'description' => 'LLL:EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang.xlf:tx_jhkestatsexport_task.description',
-	'additionalFields' => 'Heilmann\\JhKestatsExport\\Task\\ExportAdditionalFieldProvider'
+	'additionalFields' => \Heilmann\JhKestatsExport\Task\ExportAdditionalFieldProvider::class
 );

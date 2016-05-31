@@ -5,143 +5,147 @@
 			<generator>LFEditor</generator>
 		</header>
 		<body>
-		<trans-unit id="tx_jhkestatsexport_domain_model_filelist" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_domain_model_filelist" approved="yes">
 			<source>Filelist</source>
 			<target>Dateiliste</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_domain_model_filelist.content" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_domain_model_filelist.content" approved="yes">
 			<source>Content</source>
 			<target>Inhalt</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_domain_model_filelist.filename" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_domain_model_filelist.filename" approved="yes">
 			<source>Filename</source>
 			<target>Dateiname</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_domain_model_filelist.mailsendto" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_domain_model_filelist.mailsendto" approved="yes">
 			<source>Mail send to</source>
 			<target>Email gesendet an</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_layout.create" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_layout.create" approved="yes">
 			<source>Create new PDF</source>
 			<target>Neue PDF erstellen</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_layout.overview" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_layout.overview" approved="yes">
 			<source>Overview</source>
 			<target>Übersicht</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_list.content" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_list.content" approved="yes">
 			<source>Content</source>
 			<target>Inhalt</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_list.crdate" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_list.crdate" approved="yes">
 			<source>Creation date</source>
 			<target>Erstellt am</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_list.create" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_list.create" approved="yes">
 			<source>Create new PDF</source>
 			<target>Neue PDF erstellen</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_list.delete" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_list.delete" approved="yes">
 			<source>Delete</source>
 			<target>Löschen</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_list.filename" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_list.deleteSure" approved="yes">
+			<source>Are you sure to delete this pdf?</source>
+			<target>Sind Sie sicher, dass Sie diese PDF löschen möchten?</target>
+		</trans-unit>
+		<trans-unit id="tx_jhkestatsexport_list.filename" approved="yes">
 			<source>Filename</source>
 			<target>Dateiname</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_list.overview" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_list.overview" approved="yes">
 			<source>Overview</source>
 			<target>Übersicht</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_list.tstamp" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_list.tstamp" approved="yes">
 			<source>Last update date</source>
 			<target>Letzte Änderung</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_new.create" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_new.create" approved="yes">
 			<source>Create new PDF</source>
 			<target>Neue PDF erstellen</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_new.form.browserRobots" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_new.form.browserRobots" approved="yes">
 			<source>Browser/Robots</source>
 			<target>Browser/Robots</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_new.form.browserRobotsBrowsersImg" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_new.form.browserRobotsBrowsersImg" approved="yes">
 			<source>Browser/Robots: Browsers as image</source>
 			<target>Browser/Robots: Browser als Bild</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_new.form.domain" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_new.form.domain" approved="yes">
 			<source>Domain</source>
 			<target>Domain</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_new.form.language" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_new.form.language" approved="yes">
 			<source>Language</source>
 			<target>Sprache</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_new.form.mailTo" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_new.form.mailTo" approved="yes">
 			<source>Mail PDF to</source>
 			<target>Email mit PDf an</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_new.form.month" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_new.form.month" approved="yes">
 			<source>Select month</source>
 			<target>Monat auswählen</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_new.form.monthLast" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_new.form.monthLast" approved="yes">
 			<source>Last complete month</source>
 			<target>Letzten kompletten Monat</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_new.form.monthThis" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_new.form.monthThis" approved="yes">
 			<source>This month</source>
 			<target>Diesen Monat</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_new.form.other" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_new.form.other" approved="yes">
 			<source>Other</source>
 			<target>Sonstiges</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_new.form.overview" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_new.form.overview" approved="yes">
 			<source>Overview</source>
 			<target>Übersicht</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_new.form.pageviews" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_new.form.pageviews" approved="yes">
 			<source>Pageviews</source>
 			<target>Seitenansichten</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_new.form.referers" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_new.form.referers" approved="yes">
 			<source>Referers</source>
 			<target>Herkunft</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_new.form.rootid" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_new.form.rootid" approved="yes">
 			<source>Id of website-root</source>
 			<target>Website-Root Id</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_new.form.submit" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_new.form.submit" approved="yes">
 			<source>Submit</source>
 			<target>Abschicken</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_new.form.time" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_new.form.time" approved="yes">
 			<source>Time</source>
 			<target>Zeiten</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_new.form.timeMerge" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_new.form.timeMerge" approved="yes">
 			<source>Time: Merge pageviews and visitors in one table</source>
 			<target>Zeiten: Seitenansichten und Besucher in einer Tabelle</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_new.form.timeVisitsDayofmonthImg" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_new.form.timeVisitsDayofmonthImg" approved="yes">
 			<source>Time: Visitors by day of month as image</source>
 			<target>Zeiten: Besucher nach Tag im Monat als Bild</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_new.form.timeVisitsDayofweekImg" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_new.form.timeVisitsDayofweekImg" approved="yes">
 			<source>Time: Visitors by day of week as image</source>
 			<target>Zeiten: Besucher nach Wochentag als Bild</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_new.form.timeVisitsHourofdayImg" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_new.form.timeVisitsHourofdayImg" approved="yes">
 			<source>Time: Visitors by hour of day as image</source>
 			<target>Zeiten: Besucher nach Uhrzeit als Bild</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_task.description" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_task.description" approved="yes">
 			<source>Export statistics as PDF and send them in email</source>
 			<target>Statistik als PDF exportieren und per Email verschicken</target>
 		</trans-unit>
-		<trans-unit id="tx_jhkestatsexport_task.title" approved="yes" xml:space="preserve">
+		<trans-unit id="tx_jhkestatsexport_task.title" approved="yes">
 			<source>Export statistics</source>
 			<target>Statistik exportieren</target>
 		</trans-unit>

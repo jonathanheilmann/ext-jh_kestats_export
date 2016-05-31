@@ -26,8 +26,6 @@ if (TYPO3_MODE === 'BE') {
 
 }
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Export ke_stats');
-
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_jhkestatsexport_domain_model_filelist', 'EXT:jh_kestats_export/Resources/Private/Language/locallang_csh_tx_jhkestatsexport_domain_model_filelist.xlf');
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_jhkestatsexport_domain_model_filelist');
 $GLOBALS['TCA']['tx_jhkestatsexport_domain_model_filelist'] = array(
@@ -53,10 +51,8 @@ $GLOBALS['TCA']['tx_jhkestatsexport_domain_model_filelist'] = array(
 		),
 		'searchFields' => 'filename,mailsendto,content,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Filelist.php',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_jhkestatsexport_domain_model_filelist.gif'
+		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_jhkestatsexport_domain_model_filelist.gif',
+
+		'rootLevel' => 1
 	),
 );
-## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
-
-// Allow table only on rootLevel
-$GLOBALS['TCA']['tx_jhkestatsexport_domain_model_filelist']['ctrl']['rootLevel'] = 1;
