@@ -29,7 +29,7 @@ Export ke_stats
 		ke_stats,export,pdf,stats,statistics
 
 	:Copyright:
-		2013-2014
+		2013-2016
 
 	:Author:
 		Jonathan Heilmann
