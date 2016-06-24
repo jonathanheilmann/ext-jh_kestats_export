@@ -25,8 +25,6 @@ namespace Heilmann\JhKestatsExport\ViewHelpers;
  *
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
-use TYPO3\CMS\Core\Imaging\Icon;
-use TYPO3\CMS\Core\Type\Icon\IconState;
 use TYPO3\CMS\Core\Utility\VersionNumberUtility;
 use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
 
@@ -45,7 +43,7 @@ class IconViewHelper extends AbstractViewHelper
      * @param string $alternativeMarkupIdentifier
      * @return string
      */
-    public function render($identifier, $size = Icon::SIZE_SMALL, $overlay = null, $state = IconState::STATE_DEFAULT, $alternativeMarkupIdentifier = null)
+    public function render($identifier, $size = 'small', $overlay = null, $state = 'default', $alternativeMarkupIdentifier = null)
     {
         if (VersionNumberUtility::convertVersionNumberToInteger(VersionNumberUtility::getNumericTypo3Version()) < 7000000)
         {

@@ -399,7 +399,11 @@ class ExportService
             if (strstr($filename, $type . '_') AND strpos($filename, '.png') !== false)
                 unlink(GeneralUtility::getFileAbsFileName($this->uploadfolderPath . $filename));
 
-        //Create the graph. These two calls are always required
+        //Create the graph
+        $extPath  = ExtensionManagementUtility::extPath('jh_kestats_export');
+        GeneralUtility::requireOnce($extPath . 'Classes/Contrib/jpgraph/src/jpgraph.php');
+        GeneralUtility::requireOnce($extPath . 'Classes/Contrib/jpgraph/src/jpgraph_line.php');
+
         /** @var \Graph $graph */
         $graph = GeneralUtility::makeInstance('Graph', 780, 500);
         $graph->title->Set($header);
@@ -762,7 +766,11 @@ class ExportService
             if (strpos($filename, 'overview_') == 0 AND strpos($filename, '.png') !== false)
                 unlink(GeneralUtility::getFileAbsFileName($this->uploadfolderPath . $filename));
 
-        //Create the graph. These two calls are always required
+        //Create the graph
+        $extPath  = ExtensionManagementUtility::extPath('jh_kestats_export');
+        GeneralUtility::requireOnce($extPath . 'Classes/Contrib/jpgraph/src/jpgraph.php');
+        GeneralUtility::requireOnce($extPath . 'Classes/Contrib/jpgraph/src/jpgraph_line.php');
+
         /** @var \Graph $graph */
         $graph = GeneralUtility::makeInstance('Graph', 780, 400);
         $graph->SetScale('textlin', 0, 0, 0, 0);
