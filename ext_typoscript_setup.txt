@@ -1,0 +1,12 @@
+
+# Module configuration
+module.tx_jhkestatsexport {
+    persistence {
+        storagePid = 0
+    }
+    view {
+        templateRootPaths.0 = EXT:jh_kestats_export/Resources/Private/Backend/Templates/
+        partialRootPaths.0 = EXT:jh_kestats_export/Resources/Private/Backend/Partials/
+        layoutRootPaths.0 = EXT:jh_kestats_export/Resources/Private/Backend/Layouts/
+    }
+}

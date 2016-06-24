@@ -1,34 +1,42 @@
-
+{namespace h = Heilmann\JhKestatsExport\ViewHelpers}
 <f:layout name="Default" />
 
 <f:section name="content">
-<h1><f:translate key="tx_jhkestatsexport_list.overview" /></h1>
+	<h1><f:translate key="tx_jhkestatsexport_list.overview" /></h1>
 
-<f:flashMessages />
+	<f:flashMessages />
 
-<table class="t3-table">
-	<thead>
-		<tr>
-			<th><f:translate key="tx_jhkestatsexport_list.tstamp" /></th>
-			<th><f:translate key="tx_jhkestatsexport_list.crdate" /></th>
-			<th><f:translate key="tx_jhkestatsexport_list.filename" /></th>
-			<th><f:translate key="tx_jhkestatsexport_list.content" /></th>
-			<th> </th>
-		</tr>
-	</thead>
+    <f:link.action action="new" title="{f:translate(key:'tx_jhkestatsexport_list.create')}"><h:icon identifier="actions-document-new" /></f:link.action>
+    <div class="table-responsive">
+        <table class="t3-table table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th><f:translate key="tx_jhkestatsexport_list.tstamp" /></th>
+                    <th><f:translate key="tx_jhkestatsexport_list.crdate" /></th>
+                    <th><f:translate key="tx_jhkestatsexport_list.filename" /></th>
+                    <th><f:translate key="tx_jhkestatsexport_list.content" /></th>
+                    <th> </th>
+                </tr>
+            </thead>
 
-	<tbody>
-	<f:for each="{filelists}" as="filelist">
-		<tr>
-			<td><f:format.date format="d.m.Y H:i">{filelist.tstamp}</f:format.date></td>
-			<td><f:format.date format="d.m.Y H:i">{filelist.crdate}</f:format.date></td>
-			<td><a href="../uploads/tx_jhkestatsexport/{filelist.filename}" target="_new">{filelist.filename}</a></td>
-			<td><f:format.raw>{filelist.content}</f:format.raw></td>
-			<td><f:be.buttons.icon uri="{f:uri.action(action:'delete', arguments:{filelist : filelist})}" icon="actions-edit-delete" title="{f:translate(key:'tx_jhkestatsexport_list.delete')}" /></td>
-		</tr>
-	</f:for>
-</tbody>
-</table>
-
-<f:link.action action="new"><f:translate key="tx_jhkestatsexport_list.create" /></f:link.action>
+            <tbody>
+                <f:for each="{filelists}" as="filelist">
+                    <tr>
+                        <td>{filelist.tstamp->f:format.date(format:'d.m.Y H:i')}</td>
+                        <td>{filelist.crdate->f:format.date(format:'d.m.Y H:i')}</td>
+                        <td>
+                            <h:icon identifier="mimetypes-pdf" />
+                            <a href="../uploads/tx_jhkestatsexport/{filelist.filename}" target="_blank">{filelist.filename}</a>
+                        </td>
+                        <td>{filelist.content->f:format.raw()}</td>
+                        <td class="col-control">
+                            <f:link.action action="delete" arguments="{filelist : filelist}" title="{f:translate(key:'tx_jhkestatsexport_list.delete')}" additionalAttributes="{onclick: 'return confirm(\"{f:translate(key:\'tx_jhkestatsexport_list.deleteSure\')}\")'}">
+                                <h:icon identifier="actions-edit-delete" />
+                            </f:link.action>
+                        </td>
+                    </tr>
+                </f:for>
+            </tbody>
+        </table>
+    </div>
 </f:section>

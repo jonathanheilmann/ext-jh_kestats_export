@@ -5,7 +5,7 @@ namespace Heilmann\JhKestatsExport\Controller;
  *
  *  Copyright notice
  *
- *  (c) 2014 Jonathan Heilmann <mail@jonathan-heilmann.de>
+ *  (c) 2014-2016 Jonathan Heilmann <mail@jonathan-heilmann.de>
  *
  *  All rights reserved
  *
@@ -25,11 +25,15 @@ namespace Heilmann\JhKestatsExport\Controller;
  *
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
+use Heilmann\JhKestatsExport\Domain\Model\Filelist;
+use TYPO3\CMS\Core\Messaging\AbstractMessage;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
  * FilelistController
  */
-class FilelistController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+class FilelistController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
+{
 
 	/**
 	 * filelistRepository
@@ -37,22 +41,26 @@ class FilelistController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	 * @var \Heilmann\JhKestatsExport\Domain\Repository\FilelistRepository
 	 * @inject
 	 */
-	protected $filelistRepository = NULL;
+	protected $filelistRepository = null;
 
 	/**
 	 * @var int Current page
 	 */
-	protected $pageId = NULL;
+	protected $pageId = null;
 
-	protected $exportService = NULL;
+	/**
+	 * @var null
+	 */
+	protected $exportService = null;
 
 	/**
 	 * Action initializer
 	 *
 	 * @return void
 	 */
-	protected function initializeAction() {
-		$this->pageId = (int) \TYPO3\CMS\Core\Utility\GeneralUtility::_GP('id');
+	protected function initializeAction()
+    {
+		$this->pageId = (int)GeneralUtility::_GP('id');
 	}
 
 	/**
@@ -60,7 +68,8 @@ class FilelistController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	 *
 	 * @return void
 	 */
-	public function listAction() {
+	public function listAction()
+    {
 		$filelists = $this->filelistRepository->findAll();
 		$this->view->assign('filelists', $filelists);
 	}
@@ -70,41 +79,39 @@ class FilelistController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	 *
 	 * @return void
 	 */
-	public function newAction() {
+	public function newAction()
+    {
 		$formPrefill = array();
 		$formStyle = array();
 		// Get settings from BE-User session
 		$modSettings = $GLOBALS['BE_USER']->getModuleData($this->MCONF['name'], 'ses');
-		//\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($modSettings);
-		if (!empty($modSettings)) {
+		if (!empty($modSettings))
+        {
 			$modSettingsForm = $modSettings;
-			foreach ($modSettingsForm as $key => $value) {
-				if (!empty($value)) {
-					$formPrefill['checkbox'][$key] = TRUE;
-				} else {
-					$formPrefill['checkbox'][$key] = FALSE;
-				}
-			}
-		} else {
+			foreach ($modSettingsForm as $key => $value)
+                $formPrefill['checkbox'][$key] = !empty($value) ? true : false;
+		} else
+        {
 			// Default settings
-			$formPrefill['checkbox']['overview'] = TRUE;
-			$formPrefill['checkbox']['pageviews'] = TRUE;
-			$formPrefill['checkbox']['time'] = TRUE;
-			$formPrefill['checkbox']['referers'] = TRUE;
-			$formPrefill['checkbox']['browserRobots'] = TRUE;
-			$formPrefill['checkbox']['browserRobotsBrowsersImg'] = FALSE;
-			$formPrefill['checkbox']['other'] = FALSE;
-			$formPrefill['checkbox']['emailto'] = FALSE;
+			$formPrefill['checkbox']['overview'] = true;
+			$formPrefill['checkbox']['pageviews'] = true;
+			$formPrefill['checkbox']['time'] = true;
+			$formPrefill['checkbox']['referers'] = true;
+			$formPrefill['checkbox']['browserRobots'] = true;
+			$formPrefill['checkbox']['browserRobotsBrowsersImg'] = false;
+			$formPrefill['checkbox']['other'] = false;
+			$formPrefill['checkbox']['emailto'] = false;
 		}
 		// Get domains
 		$domains = $GLOBALS['TYPO3_DB']->exec_SELECTgetRows('*', 'sys_domain', 'hidden=0 AND pid=' . $this->pageId);
-		if (empty($domains)) {
-			$hostname = \TYPO3\CMS\Core\Utility\GeneralUtility::getHostname();
+		if (empty($domains))
+        {
+			$hostname = GeneralUtility::getHostname();
 			$formPrefill['domain'] = array($hostname => $hostname);
-		} else {
-			foreach ($domains as $domain) {
+		} else
+        {
+			foreach ($domains as $domain)
 				$formPrefill['domain'][$domain['domainName']] = $domain['domainName'];
-			}
 		}
 		// Get months
 		$row_first = $GLOBALS['TYPO3_DB']->exec_SELECTgetSingleRow('*', 'tx_kestats_statdata', 'type=\'pages\' AND category=\'pages\' AND year>0', '', 'uid');
@@ -114,12 +121,15 @@ class FilelistController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 		$fromToArray['from_year'] = $row_first['year'];
 		$fromToArray['to_month'] = $row_last['month'];
 		$fromToArray['to_year'] = $row_last['year'];
-		for ($i = $fromToArray['from_year']; $i <= $fromToArray['to_year']; $i++) {
-			for ($j = 1; $j <= 12; $j++) {
-				if ($i == $fromToArray['from_year'] and $j == 1) {
+		for ($i = $fromToArray['from_year']; $i <= $fromToArray['to_year']; $i++)
+        {
+			for ($j = 1; $j <= 12; $j++)
+            {
+				if ($i == $fromToArray['from_year'] and $j == 1)
 					$j = $fromToArray['from_month'];
-				}
-				if ($i == $fromToArray['to_year'] and $j == $fromToArray['to_month']) {
+
+				if ($i == $fromToArray['to_year'] and $j == $fromToArray['to_month'])
+                {
 					$formPrefill['month'][date('Y-m', mktime(0, 0, 0, $j, 10, $i))] = date('F Y', mktime(0, 0, 0, $j, 10, $i));
 					//$option .= '<option value="'.date("Y-m", mktime(0, 0, 0, $j, 10, $i)).'" selected="selected">'.date("F Y", mktime(0, 0, 0, $j, 10, $i)).'</option>';
 					break;
@@ -129,12 +139,12 @@ class FilelistController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 		}
 		// Get email
 		$formPrefill['mailTo'] = $GLOBALS['BE_USER']->user['email'];
-		if ($formPrefill['time'] === FALSE) {
+		if ($formPrefill['time'] === false)
 			$formStyle['timeSubelements'] = 'display:none;';
-		}
-		if ($formPrefill['browserRobots'] === FALSE) {
+
+		if ($formPrefill['browserRobots'] === false)
 			$formStyle['browserRobotsSubelements'] = 'display:none;';
-		}
+
 		$this->view->assign('formStyle', $formStyle);
 		$this->view->assign('formPrefill', $formPrefill);
 	}
@@ -144,11 +154,13 @@ class FilelistController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	 *
 	 * @return void
 	 */
-	public function createAction() {
-		$post = \TYPO3\CMS\Core\Utility\GeneralUtility::_GP('tx_jhkestatsexport_web_jhkestatsexportlist');
+	public function createAction()
+    {
+		$post = GeneralUtility::_GP('tx_jhkestatsexport_web_jhkestatsexportlist');
 		//\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($post);
 		// Get settings for the render-process
-		if (!empty($post)) {
+		if (!empty($post))
+        {
 			// Save settings for this BE-User session
 			$GLOBALS['BE_USER']->pushModuleData($this->MCONF['name'], $post);
 		}
@@ -161,46 +173,45 @@ class FilelistController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 						\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($GLOBALS['LANG']->lang);*/
 
 		// Construct exportService
-		$this->exportService = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('Heilmann\\JhKestatsExport\\Service\\ExportService');
-		$pdfcontent = $this->exportService->renderStatistics($this->pageId, $post);
-		$filename = $this->exportService->renderpdf($pdfcontent, $post);
+        /** @var \TYPO3\CMS\Extbase\Object\ObjectManagerInterface $objectManager */
+        $objectManager = GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Object\\ObjectManager');
+        /** @var \Heilmann\JhKestatsExport\Service\ExportService $exportService */
+        $exportService = $objectManager->get('Heilmann\\JhKestatsExport\\Service\\ExportService');
+
+		$pdfcontent = $exportService->renderStatistics($this->pageId, $post);
+		$filename = $exportService->renderpdf($pdfcontent, $post);
+
 		// Send email to given mail-address with attachment
-		if (!empty($post)) {
-			if (!empty($post['mailTo'])) {
-				$mailToArray = array();
-				$mailToArray = explode(',', $post['mailTo']);
-				foreach ($mailToArray as $mailTo) {
-					$mailTo = trim($mailTo);
-					if (filter_var($mailTo, FILTER_VALIDATE_EMAIL)) {
-						$this->exportService->sendEmail($mailTo, \TYPO3\CMS\Core\Utility\GeneralUtility::getHostname(), $filename);
-					} else {
-
-					}
-				}
-			} else {
-
-			}
-		}
+        if (is_array($post) && isset($post['mailTo']) && !empty($post['mailTo']))
+        {
+            $mailToArray = explode(',', $post['mailTo']);
+            foreach ($mailToArray as $mailTo)
+            {
+                $mailTo = trim($mailTo);
+                if (filter_var($mailTo, FILTER_VALIDATE_EMAIL))
+                    $exportService->sendEmail($mailTo, GeneralUtility::getHostname(), $filename);
+            }
+        }
 		// Reset $GLOBALS['LANG']->lang
 		/*$GLOBALS['LANG']->lang = $storedLang['lang'];
 						\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($GLOBALS['LANG']->lang);*/
 
-		$this->addFlashMessage('The pdf has been created.', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::OK);
+		$this->addFlashMessage('The pdf has been created.', '', AbstractMessage::OK);
 		$this->redirect('list');
 	}
 
 	/**
 	 * action delete
 	 *
-	 * @param \Heilmann\JhKestatsExport\Domain\Model\Filelist $filelist
+	 * @param Filelist $filelist
 	 * @return void
 	 */
-	public function deleteAction(\Heilmann\JhKestatsExport\Domain\Model\Filelist $filelist) {
+	public function deleteAction(Filelist $filelist) {
 		// Unlink PDF
-		if (is_file(\TYPO3\CMS\Core\Utility\GeneralUtility::getFileAbsFileName('uploads/tx_jhkestatsexport/') . $filelist->getFilename())) {
-			unlink(\TYPO3\CMS\Core\Utility\GeneralUtility::getFileAbsFileName('uploads/tx_jhkestatsexport/') . $filelist->getFilename());
-		}
-		$this->addFlashMessage('The pdf has been deleted.', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::OK);
+		if (is_file(GeneralUtility::getFileAbsFileName('uploads/tx_jhkestatsexport/') . $filelist->getFilename()))
+			unlink(GeneralUtility::getFileAbsFileName('uploads/tx_jhkestatsexport/') . $filelist->getFilename());
+
+		$this->addFlashMessage('The pdf has been deleted.', '', AbstractMessage::OK);
 		$this->filelistRepository->remove($filelist);
 		$this->redirect('list');
 	}

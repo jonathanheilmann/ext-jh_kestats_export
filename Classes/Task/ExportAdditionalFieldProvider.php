@@ -4,7 +4,7 @@ namespace Heilmann\JhKestatsExport\Task;
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2013-2014 Jonathan Heilmann <mail@jonathan-heilmann.de>
+ *  (c) 2013-2016 Jonathan Heilmann <mail@jonathan-heilmann.de>
  *  All rights reserved
  *
  *  This script is part of the TYPO3 project. The TYPO3 project is
@@ -433,4 +433,3 @@ class ExportAdditionalFieldProvider implements \TYPO3\CMS\Scheduler\AdditionalFi
 
 
 }
-?>

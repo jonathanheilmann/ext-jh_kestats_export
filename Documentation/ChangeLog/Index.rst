@@ -23,6 +23,12 @@ ChangeLog
          Changes
 
  - :Version:
+         1.1.0
+
+   :Changes:
+         \* [TASK] Support TYPO3 CMS 7 LTS
+
+ - :Version:
          1.0.5
 
    :Changes:

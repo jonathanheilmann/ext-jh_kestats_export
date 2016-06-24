@@ -1,5 +1,4 @@
 <?php
-//define("DOMPDF_TEMP_DIR", "/kunden/196859_65795/kamil_bis/kamil_fusspflege/tmp/");
 define("DOMPDF_CHROOT", DOMPDF_DIR);
 define("DOMPDF_UNICODE_ENABLED", false);
 define("DOMPDF_PDF_BACKEND", "PDFLib");
@@ -20,7 +19,7 @@ define("DEBUG_LAYOUT_BLOCKS", false);
 define("DEBUG_LAYOUT_INLINE", false);
 define("DOMPDF_FONT_HEIGHT_RATIO", 1.0);
 define("DEBUG_LAYOUT_PADDINGBOX", false);
-define("DOMPDF_LOG_OUTPUT_FILE", DOMPDF_FONT_DIR."log.htm");
+define("DOMPDF_LOG_OUTPUT_FILE", "log.html");
 define("DOMPDF_ENABLE_HTML5PARSER", true);
 define("DOMPDF_ENABLE_FONTSUBSETTING", true);
 
